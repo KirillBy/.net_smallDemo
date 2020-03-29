@@ -33,14 +33,17 @@ namespace TreadsSecondExample
             MyThread mt1 = new MyThread("Thread No 1");
             MyThread mt2 = new MyThread("Thread No 2");
             MyThread mt3 = new MyThread("Thread No 3");
-            do
-            {
-                Console.WriteLine(".");
-                Thread.Sleep(100);
-            } while (mt1.Thrd.IsAlive ||
-                       mt2.Thrd.IsAlive ||
-                       mt3.Thrd.IsAlive);
-            Console.WriteLine("Main thread is over");
+
+            mt1.Thrd.Join();
+            Console.WriteLine("Thread #1 joined");
+
+            mt2.Thrd.Join();
+            Console.WriteLine("Thread #2 joined");
+
+            mt3.Thrd.Join();
+            Console.WriteLine("Thread #3 joined");
+
+            Console.WriteLine("Main Thread is over");
         }
     }
 }
