@@ -5,7 +5,7 @@ namespace TreadsSecondExample
     class MyThread
     {
         public int Count;
-        Thread Thrd;
+        public Thread Thrd;
         public MyThread(string name)
         {
             Count = 0;
@@ -37,9 +37,9 @@ namespace TreadsSecondExample
             {
                 Console.WriteLine(".");
                 Thread.Sleep(100);
-            } while (mt1.Count < 10 ||
-                       mt2.Count < 10 ||
-                       mt3.Count < 10);
+            } while (mt1.Thrd.IsAlive ||
+                       mt2.Thrd.IsAlive ||
+                       mt3.Thrd.IsAlive);
             Console.WriteLine("Main thread is over");
         }
     }
