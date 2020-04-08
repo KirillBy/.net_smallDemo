@@ -20,6 +20,8 @@ namespace Generics_Task2_MyList
             myList[1] = 101;
             Console.WriteLine(myList[1]);
             myList[10] = 400;
+            Console.WriteLine(new string('-',30));
+            myList.GetArray();
         }
     }
 }
