@@ -24,7 +24,7 @@ namespace prc
                 if (userChoice % 2 != 0 && compChoice % 2 == 0)
                     Console.WriteLine("Computer win");
             }
-            else
+            else if (userChoice < compChoice)
             {
                 if (userChoice % 2 == 0 && compChoice % 2 != 0)
                     Console.WriteLine("User win");
