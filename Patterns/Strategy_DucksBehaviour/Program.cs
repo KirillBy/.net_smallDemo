@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Strategy_DucksBehaviour
 {
@@ -6,7 +7,14 @@ namespace Strategy_DucksBehaviour
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var ducks = new List<Duck>() { new ElectronicDuck(), new SimpleDuck(), new WoodenDuck() };
+            foreach (var duck in ducks)
+            {
+                duck.Display();
+                duck.Swim();
+                duck.Fly();
+                duck.Quack();
+            }
         }
     }
 }
