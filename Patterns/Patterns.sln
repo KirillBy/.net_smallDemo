@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer_WeatherStation", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator_Starbuzz", "Decorator_Starbuzz\Decorator_Starbuzz.csproj", "{88BB4AEC-A9DC-48AC-9AB5-5DDC3DA51554}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod_PizzaShop", "FactoryMethod_PizzaShop\FactoryMethod_PizzaShop.csproj", "{6265553E-F67B-4DB4-9C93-44B149AE2398}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{88BB4AEC-A9DC-48AC-9AB5-5DDC3DA51554}.Release|x64.Build.0 = Release|Any CPU
 		{88BB4AEC-A9DC-48AC-9AB5-5DDC3DA51554}.Release|x86.ActiveCfg = Release|Any CPU
 		{88BB4AEC-A9DC-48AC-9AB5-5DDC3DA51554}.Release|x86.Build.0 = Release|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Debug|x64.Build.0 = Debug|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Debug|x86.Build.0 = Debug|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Release|x64.ActiveCfg = Release|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Release|x64.Build.0 = Release|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Release|x86.ActiveCfg = Release|Any CPU
+		{6265553E-F67B-4DB4-9C93-44B149AE2398}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
