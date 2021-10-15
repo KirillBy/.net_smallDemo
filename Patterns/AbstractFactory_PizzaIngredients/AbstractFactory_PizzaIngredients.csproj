@@ -5,8 +5,4 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AbstractFactory_PizzaIngredients\AbstractFactory_PizzaIngredients.csproj" />
-  </ItemGroup>
-
 </Project>

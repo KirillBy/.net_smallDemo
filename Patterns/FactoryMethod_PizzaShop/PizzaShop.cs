@@ -1,5 +1,5 @@
 using System;
-using System.Net;
+using AbstractFactory_PizzaIngredients;
 
 namespace FactoryMethod_PizzaShop
 {
@@ -12,6 +12,7 @@ namespace FactoryMethod_PizzaShop
             pizza.Bake();
             pizza.Cut();
             pizza.Box();
+            Console.WriteLine(pizza.ToString());
             return pizza;
         }
 
@@ -22,11 +23,12 @@ namespace FactoryMethod_PizzaShop
     {
         protected override Pizza createPizza(string type)
         {
+            IPizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
             switch (type)
             {
-                case "cheese" : return new NYStyleCheesePizza();
-                case "pepperoni" : return new NYStylePepperoniPizza();
-                case "vegan" : return new NYStyleVeganPizza();
+                case "cheese" : return new NYStyleCheesePizza(ingredientFactory);
+                case "pepperoni" : return new NYStylePepperoniPizza(ingredientFactory);
+                case "vegan" : return new NYStyleVeganPizza(ingredientFactory);
                 default: throw new ArgumentException("Incorrect type of pizza");
             }
         }
@@ -37,11 +39,12 @@ namespace FactoryMethod_PizzaShop
     {
         protected override Pizza createPizza(string type)
         {
+            IPizzaIngredientFactory ingredientFactory = new ChicagoPizzaIngredientFactory();
             switch (type)
             {
-                case "cheese" : return new ChicagoStyleCheesePizza();
-                case "pepperoni" : return new ChicagoStylePepperoniPizza();
-                case "vegan" : return new ChicagoStyleVeganPizza();
+                case "cheese" : return new ChicagoStyleCheesePizza(ingredientFactory);
+                case "pepperoni" : return new ChicagoStylePepperoniPizza(ingredientFactory);
+                case "vegan" : return new ChicagoStyleVeganPizza(ingredientFactory);
                 default: throw new ArgumentException("Incorrect type of pizza");
             }
         }

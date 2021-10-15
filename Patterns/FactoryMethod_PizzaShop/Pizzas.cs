@@ -1,48 +1,37 @@
 using System;
+using AbstractFactory_PizzaIngredients;
 
 namespace FactoryMethod_PizzaShop
 {
     public class NYStyleCheesePizza : Pizza
     {
-        public NYStyleCheesePizza()
+        public NYStyleCheesePizza(IPizzaIngredientFactory ingredientFactory) : base(ingredientFactory)
         {
-            _name = "NY style cheese pizza";
-            _dough = "Thin Crust Dough";
-            _sauce = "Marinara Sauce";
-            _toppings.Add("Grated Reggiano Cheese");
+            _name = "NYStyle Cheese Pizza";
         }
     }
     
     public class NYStylePepperoniPizza : Pizza
     {
-        public NYStylePepperoniPizza()
+        public NYStylePepperoniPizza(IPizzaIngredientFactory ingredientFactory): base(ingredientFactory)
         {
-            _name = "NY style pepperoni pizza";
-            _dough = "Thin Crust Dough";
-            _sauce = "Marinara Sauce";
-            _toppings.Add("Sliced Pepperoni");
+            _name = "NYStyle Pepperoni Pizza";
         }
     }
     
     public class NYStyleVeganPizza : Pizza
     {
-        public NYStyleVeganPizza()
+        public NYStyleVeganPizza(IPizzaIngredientFactory ingredientFactory): base(ingredientFactory)
         {
-            _name = "NY style vegan pizza";
-            _dough = "Thin Crust Dough";
-            _sauce = "Marinara Sauce";
-            _toppings.Add("A lot of vegetables");
+            _name = "NYStyle Vegan Pizza";
         }
     }
     
     public class ChicagoStyleCheesePizza : Pizza
     {
-        public ChicagoStyleCheesePizza()
+        public ChicagoStyleCheesePizza(IPizzaIngredientFactory ingredientFactory): base(ingredientFactory)
         {
             _name = "Chicago style cheese pizza";
-            _dough = "Extra Thick Crust Dough";
-            _sauce = "Plum Tomato Sauce";
-            _toppings.Add("Mozzarella Cheese");
         }
 
         public override void Cut()
@@ -53,12 +42,9 @@ namespace FactoryMethod_PizzaShop
     
     public class ChicagoStylePepperoniPizza : Pizza
     {
-        public ChicagoStylePepperoniPizza()
+        public ChicagoStylePepperoniPizza(IPizzaIngredientFactory ingredientFactory): base(ingredientFactory)
         {
             _name = "Chicago style pepperoni pizza";
-            _dough = "Extra Thick Crust Dough";
-            _sauce = "Plum Tomato Sauce";
-            _toppings.Add("Sliced Pepperoni");
         }
 
         public override void Cut()
@@ -69,12 +55,9 @@ namespace FactoryMethod_PizzaShop
     
     public class ChicagoStyleVeganPizza : Pizza
     {
-        public ChicagoStyleVeganPizza()
+        public ChicagoStyleVeganPizza(IPizzaIngredientFactory ingredientFactory): base(ingredientFactory)
         {
             _name = "Chicago style vegan pizza";
-            _dough = "Extra Thick Crust Dough";
-            _sauce = "Plum Tomato Sauce";
-            _toppings.Add("A lot of vegetables");
         }
 
         public override void Cut()

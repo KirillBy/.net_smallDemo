@@ -1,25 +1,34 @@
 using System;
 using System.Collections.Generic;
+using AbstractFactory_PizzaIngredients;
 
 namespace FactoryMethod_PizzaShop
 {
     public abstract class Pizza
     {
-        protected string _name;
-        protected string _dough;
-        protected string _sauce;
-        protected List<string> _toppings = new List<string>();
+        protected String _name;
+        protected IDough _dough;
+        protected ISauce _sauce;
+        protected ICheese _cheese;
+        protected IPepperoni _pepperoni;
+        protected IClams _clams;
+        protected IVeggies[] _veggies;
+        protected IPizzaIngredientFactory _ingredientFactory;
 
+        public Pizza(IPizzaIngredientFactory ingredientFactory)
+        {
+            _ingredientFactory = ingredientFactory;
+        }
+        
         public virtual void Prepare()
         {
-          Console.WriteLine("Preparing " + _name);   
-          Console.WriteLine("Tossing dough " + _dough);   
-          Console.WriteLine("Adding sauce " + _sauce);   
-          Console.WriteLine("Adding toppings ");
-          foreach (var topping in _toppings)
-          {
-              Console.WriteLine(topping + " ");
-          }
+            Console.WriteLine("Preparing: " + _name);
+            _dough = _ingredientFactory.CreateDough();
+            _sauce = _ingredientFactory.CreateSauce();
+            _cheese = _ingredientFactory.CreateCheese();
+            _clams = _ingredientFactory.CreateClam();
+            _pepperoni = _ingredientFactory.CreatePepperoni();
+            _veggies = _ingredientFactory.CreateVeggies();
         }
         
         public virtual void Bake()
@@ -40,6 +49,12 @@ namespace FactoryMethod_PizzaShop
         public string GetName()
         {
             return _name;
+        }
+
+        public override string ToString()
+        {
+            return "Pizza " + _name + " .Ingredients: " + _cheese.Name + ", " + _dough.Name + ", " +
+                   _sauce.Name + ", " + _pepperoni.Name + ", " + _clams.Name + ", ";
         }
     }
 }
