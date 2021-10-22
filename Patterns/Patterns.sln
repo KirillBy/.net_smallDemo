@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory_PizzaIngred
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton_ChoclateBoiler", "Singleton_ChoclateBoiler\Singleton_ChoclateBoiler.csproj", "{1B69C16C-9D77-4821-AD98-1FBB0F359B3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commmand_RemoteControll", "Commmand_RemoteControll\Commmand_RemoteControll.csproj", "{7867246F-E066-48E1-B081-894BB9771185}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,5 +102,17 @@ Global
 		{1B69C16C-9D77-4821-AD98-1FBB0F359B3A}.Release|x64.Build.0 = Release|Any CPU
 		{1B69C16C-9D77-4821-AD98-1FBB0F359B3A}.Release|x86.ActiveCfg = Release|Any CPU
 		{1B69C16C-9D77-4821-AD98-1FBB0F359B3A}.Release|x86.Build.0 = Release|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Debug|x64.Build.0 = Debug|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Debug|x86.Build.0 = Debug|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Release|x64.ActiveCfg = Release|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Release|x64.Build.0 = Release|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Release|x86.ActiveCfg = Release|Any CPU
+		{7867246F-E066-48E1-B081-894BB9771185}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
