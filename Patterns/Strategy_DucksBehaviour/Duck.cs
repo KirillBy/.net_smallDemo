@@ -7,17 +7,17 @@ namespace Strategy_DucksBehaviour
         protected IFlyBehaviour _flyBehaviour;
         protected IQuackBehaviour _quackBehaviour;
 
-        public void Swim()
+        public virtual void Swim()
         {
             Console.WriteLine("I'm swimming. All ducks can swim");
         }
 
-        public void Quack()
+        public virtual void Quack()
         {
             _quackBehaviour.Quack();
         }
 
-        public void Fly()
+        public virtual void Fly()
         {
             _flyBehaviour.Fly();
         }
