@@ -6,7 +6,13 @@ namespace State_GumBallMachine
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GumballMachine gumballMachine = new GumballMachine(5);
+            gumballMachine.InsertCoin();
+            gumballMachine.TurnCrank();
+            gumballMachine.InsertCoin();
+            gumballMachine.TurnCrank();
+            gumballMachine.InsertCoin();
+            gumballMachine.TurnCrank();
         }
     }
 }

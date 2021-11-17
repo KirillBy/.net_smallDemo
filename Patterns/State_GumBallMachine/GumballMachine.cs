@@ -4,22 +4,24 @@ namespace State_GumBallMachine
 {
     public class GumballMachine
     {
-        private IState _soldOutState;
-        private IState _noQuarterState;
-        private IState _hasQuarterState;
-        private IState _soldState;
+        public IState SoldOutState { get; }
+        public IState NoQuarterState { get; }
+        public IState HasQuarterState { get; }
+        public IState SoldState { get; }
+        public IState WinnerState { get; }
 
         private IState _currentState;
-        private int _count = 0;
+        public int Count { get; private set; }  = 0;
 
         public GumballMachine(int numberGumballs)
         {
-            _soldOutState = new SoldOutState(this);
-            _noQuarterState = new NoQuarterState(this);
-            _hasQuarterState = new HasQuarterState(this);
-            _soldState = new SoldState(this);
-            _count = numberGumballs;
-            _currentState = _count > 0 ? _noQuarterState : _soldOutState;
+            SoldOutState = new SoldOutState(this);
+            NoQuarterState = new NoQuarterState(this);
+            HasQuarterState = new HasQuarterState(this);
+            SoldState = new SoldState(this);
+            WinnerState = new WinnerState(this);
+            Count = numberGumballs;
+            _currentState = Count > 0 ? NoQuarterState : SoldOutState;
         }
 
         public void InsertCoin()
@@ -38,11 +40,16 @@ namespace State_GumBallMachine
             _currentState.Dispense();
         }
 
+        public void SetState(IState state)
+        {
+            _currentState = state;
+        }
+
         public void ReleaseBall()
         {
             Console.WriteLine("Gumball rolling...");
-            if (_count != 0)
-                _count--;
+            if (Count != 0)
+                Count--;
         }
     }
 }
